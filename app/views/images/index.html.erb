@@ -1,0 +1,21 @@
+<header class="container">
+  <h1 class="element-stack">Pinterest Flow</h1>
+  <p class="element-stack">Scroll down to load more data</p>
+</header>
+
+
+<div id="columns">
+  <%=render partial: "images", locals:{images: @images} %>
+</div>
+
+
+<%= will_paginate @images %>
+
+<script type="text/javascript" charset="utf-8">
+  var totalPages = <%= @images.total_pages %>;
+  var url = '<%= root_path%>';
+  $('#columns').pageless({ totalPages: totalPages
+                       , url: url
+                       , loaderMsg: 'Loading more results'
+                       });
+</script>

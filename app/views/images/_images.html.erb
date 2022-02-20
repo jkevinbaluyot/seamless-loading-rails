@@ -1,0 +1,6 @@
+<%- images.each do |image| %>
+  <figure>
+    <img src=<%= image.url %>>
+    <figcaption><%= image.author%></figcaption>
+  </figure>
+<% end %>
