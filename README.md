@@ -1,5 +1,4 @@
 # Create Seamless Loading in Ruby on Rails
----
 Blog tutorial
 
 **by: John Kevin baluyot**
